@@ -23,7 +23,7 @@ HTML5 for structure
 CSS3 for styling & responsiveness
 JavaScript (Vanilla JS) for interactivity and animations
 
-3 📬 Contact
+# 📬 Contact
 
 For queries or collaboration:
 princesingh6173@gmail.com
