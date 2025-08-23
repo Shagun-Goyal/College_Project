@@ -84,3 +84,10 @@ document.addEventListener('click', (e) => {
   }
 });
 
+// Hamburger Logic
+const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.navbar .nav-links');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+});
+

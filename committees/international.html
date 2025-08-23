@@ -16,6 +16,10 @@
 
   <!-- Navbar -->
   <header>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+    
     <nav class="navbar">
       <ul class="nav-links">
         <li><a href="../index.html" class="active">Home</a></li>
@@ -137,6 +141,15 @@
             <p>Copyright © ICAICCIT - 2025. All Rights Reserved</p>
         </div>
     </footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.navbar .nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+</script>
 
 </body>
 </html>

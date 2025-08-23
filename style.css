@@ -589,3 +589,136 @@ body {
   }
 }
 
+/* ==== RESPONSIVE DESIGN ==== */
+
+/* Tablets & small laptops */
+@media (max-width: 1200px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 70px 40px;
+  }
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  .hero-images {
+    grid-template-columns: repeat(2, 160px);
+    gap: 20px;
+  }
+  .hero-images img {
+    width: 160px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+  .hero-text h3 {
+    font-size: 1.1rem;
+  }
+  .hero-images {
+    grid-template-columns: repeat(1, 200px);
+    gap: 20px;
+  }
+  .hero-images img {
+    width: 200px;
+  }
+
+  .partners-logos {
+    gap: 30px;
+  }
+  .partners-logos img {
+    height: 35px;
+  }
+
+  .about {
+    padding: 50px 20px;
+  }
+  .about-content h3 {
+    font-size: 1.6rem;
+  }
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .footer-content {
+    gap: 15px;
+  }
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Extra small devices (phones < 480px) */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text h3 {
+    font-size: 1rem;
+  }
+  .hero-images img {
+    width: 160px;
+  }
+  .about-img {
+    width: 100%;
+  }
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* Mobile nav behavior */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .navbar .nav-links.open {
+    max-height: 500px; /* enough space for links */
+  }
+}
+
+
