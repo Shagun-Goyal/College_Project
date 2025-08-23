@@ -364,3 +364,120 @@ body::before {
   from { background-position: 0 0; }
   to { background-position: 1200px 1200px; }
 }
+
+/* ==== ABOUT PAGE STYLING ==== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7f9fc;
+  color: #333;
+}
+
+/* About Section */
+/* ==== ABOUT PAGE STYLING (ADVANCED) ==== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0d0d1a; /* Dark futuristic background */
+  color: #eaeaea;
+  overflow-x: hidden;
+}
+
+/* About Section */
+.about {
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #0d0d1a, #12122b);
+}
+
+/* Container */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Each Card */
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+
+.about-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reverse layout */
+.about-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image Styling */
+.about-img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.6s ease, filter 0.6s ease, box-shadow 0.6s ease;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Hover Glow Effect */
+.about-card:hover .about-img {
+  transform: scale(1.07);
+  filter: brightness(1.1) contrast(1.1);
+  box-shadow: 0 20px 60px rgba(0, 255, 255, 0.5);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Content */
+.about-content {
+  flex: 1;
+}
+.about-content h3 {
+  font-size: 2rem;
+  color: #2ad7a9;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 1s ease;
+}
+.about-content p {
+  text-align: justify;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #e8bf43;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 1.2s ease;
+}
+
+.about-card.show .about-content h3,
+.about-card.show .about-content p {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-card {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .about-img {
+    width: 100%;
+  }
+  .about-content h3, .about-content p {
+    text-align: center;
+  }
+}
