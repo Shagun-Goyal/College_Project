@@ -12,12 +12,6 @@ Responsive Navbar linking to internal sections & other pages (About, Committee, 
 Vanilla JS Animations for smooth transitions.
 Planned Enhancements: Scroll animations, parallax effects, mobile-first optimizations.
 
-# 📂 Project Structure
-├── index.html      # Main homepage
-├── style.css       # Stylesheet
-├── script.js       # Animations and interactions
-├── assets/         # Logos, images, icons
-
 # 🛠️ Technologies Used
 HTML5 for structure
 CSS3 for styling & responsiveness
