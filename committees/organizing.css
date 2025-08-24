@@ -1,0 +1,444 @@
+/* ==== TOP BAR ==== */
+.top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(160%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  animation: fadeDown 1s ease;
+}
+
+.top-bar img {
+  height: 55px;
+  filter: drop-shadow(0 0 10px rgba(0, 140, 255, 0.3));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.top-bar img:hover {
+  transform: scale(1.18) rotate(4deg);
+  filter: drop-shadow(0 0 18px rgba(0, 140, 255, 0.6));
+}
+
+/* ===== Cyberpunk Futuristic Theme ===== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top left, #0a0a0f, #141820, #1c1f2b);
+  margin: 0;
+  padding: 0;
+  color: #e0e6ed;
+  overflow-x: hidden;
+
+  /* Breathing animated background */
+  background: linear-gradient(135deg, #0f0f1c, #141e30, #243b55);
+  background-size: 400% 400%;
+  animation: breathingBg 15s ease infinite;
+}
+
+/* Background breathing animation */
+@keyframes breathingBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h2.committee-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00f6ff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #00f6ff, 0 0 20px #ff00ff, 0 0 40px #00f6ff;
+}
+
+h2.committee-title span {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 25px #00f6ff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 30px 0 20px;
+  color: #ff006a;
+  font-weight: bold;
+  text-shadow: 0 0 8px #ff006a, 0 0 16px #ff00ff;
+}
+
+/* ===== Committee Container ===== */
+.committee-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+/* ===== Grid Layout ===== */
+.committee-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* ===== Committee Card ===== */
+.committee-card {
+  background: rgba(20, 25, 35, 0.8);
+  border: 2px solid #00f6ff;
+  border-radius: 16px;
+  text-align: center;
+  padding: 20px;
+  width: 260px;
+  box-shadow: 0 0 12px rgba(0, 246, 255, 0.3),
+              0 0 24px rgba(255, 0, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(10px);
+  animation: cardFadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.committee-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 20px #00f6ff, 0 0 40px #ff00ff, 0 0 60px #00f6ff;
+}
+
+/* Card entry animation */
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Images Uniform Size with Animations ===== */
+.committee-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #00f6ff;
+  box-shadow: 0 0 10px #00f6ff, 0 0 20px #ff00ff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  /* On-load animation */
+  animation: imgLoad 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes imgLoad {
+  from {
+    opacity: 0;
+    transform: scale(0.6) rotate(-15deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Hover effect on images */
+.committee-card img:hover {
+  transform: scale(1.15) rotate(6deg);
+  box-shadow: 0 0 20px #ff00ff, 0 0 40px #00f6ff, 0 0 60px #ff00ff;
+}
+
+/* ===== Text Styling ===== */
+.committee-card h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #00f6ff;
+  text-shadow: 0 0 6px #00f6ff, 0 0 12px #ff00ff;
+}
+
+.committee-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cfd8dc;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .committee-card {
+    width: 90%;
+  }
+}
+
+/* ==== PARTNERS ==== */
+.partners {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fafafa;
+  animation: fadeUp 1.2s ease;
+}
+
+.partners h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+  font-weight: bold;
+  text-shadow: 0 0 12px rgba(0,140,255,0.2);
+}
+
+.partners h2 span {
+  color: #00c2b7;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+
+.partners-logos img {
+  height: 45px;
+  filter: grayscale(100%) brightness(0.6);
+  transition: 0.4s;
+}
+
+.partners-logos img:hover {
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(0,140,255,0.4);
+  border-radius: 8px;
+}
+
+/* ====== Footer ====== */
+.footer {
+  background: rgb(2, 23, 40);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.footer-nav li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.footer-nav li a:hover {
+  color: #007aff;
+}
+
+.footer-logo img {
+  width: 95px;
+  height: auto;
+}
+
+.footer-logo p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.footer-contact p {
+  margin: 0;
+  font-size: 11px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgb(255, 253, 253);
+  margin-top: 10px;
+  padding-top: 6px;
+  font-size: 10px;
+  color: #ffffff;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px) saturate(150%);
+  text-align: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+  z-index: 1000;
+  animation: fadeDown 1.2s ease;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: inline-flex;
+  gap: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #007aff, #00c2b7);
+  transition: width 0.35s ease;
+}
+
+.navbar a:hover {
+  color: #d07826;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar .has-dropdown{
+  position: relative;
+}
+
+.navbar .has-dropdown > .dd-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/*Submenu  Panel*/
+.navbar .dropdown {
+  position: absolute;
+  top: 115%;
+  left: 0;
+  min-width: 260px;
+  padding: 12px;
+  background: #ffffff; /* solid white background */
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  list-style: none;
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+  z-index: 999;
+}
+
+/* Dropdown links */
+.navbar .dropdown li a {
+  display: block;
+  padding: 10px 15px;
+  color: #0d1b4c; /* dark blue text */
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+/* Hover effect */
+.navbar .dropdown li a:hover {
+  background: #0d1b4c;  /* dark blue hover bg */
+  color: #ffffff;       /* white text on hover */
+  transform: translateX(6px);
+}
+
+
+.navbar .dropdown li a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #780b0b;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.navbar .dropdown li a:hover,
+.navbar .dropdown li a:focus {
+  background: rgba(0,255,224,0.12);
+  color: #000000;
+  transform: translateX(3px);
+}
+
+/* show on hover (desktops) */
+@media (hover:hover) {
+  .navbar .has-dropdown:hover > .dropdown {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+}
+
+/* keyboard focus support */
+.navbar .has-dropdown:focus-within > .dropdown {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* open state (mobile via JS) */
+.navbar .has-dropdown.open > .dropdown {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* tweak for small screens: make submenu full-width under link */
+@media (max-width: 900px) {
+  .navbar .dropdown {
+    position: static;
+    width: 100%;
+    margin-top: 8px;
+    box-shadow: none;
+    border-radius: 10px;
+    transform: none;
+    opacity: 1;           /* visible when .open is added */
+    pointer-events: auto; /* controlled by .open */
+    display: none;        /* hide by default on mobile */
+  }
+  .navbar .has-dropdown.open > .dropdown {
+    display: block;
+  }
+}
+
+

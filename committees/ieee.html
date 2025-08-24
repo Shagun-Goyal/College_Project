@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IEEE Oversight Committee</title>
+  <link rel="stylesheet" href="ieee.css">
+</head>
+
+<canvas id="particle-canvas"></canvas>
+
+<script>
+const canvas = document.getElementById("particle-canvas");
+const ctx = canvas.getContext("2d");
+let particles = [];
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+document.addEventListener("mousemove", e => {
+  for (let i = 0; i < 5; i++) {
+    particles.push({
+      x: e.clientX,
+      y: e.clientY,
+      size: Math.random() * 5 + 2,
+      color: `hsl(${Math.random() * 60 + 160}, 100%, 60%)`,
+      alpha: 1,
+      speedX: (Math.random() - 0.5) * 2,
+      speedY: (Math.random() - 0.5) * 2,
+    });
+  }
+});
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach((p, i) => {
+    p.x += p.speedX;
+    p.y += p.speedY;
+    p.alpha -= 0.02;
+    p.size *= 0.96;
+    if (p.alpha <= 0) particles.splice(i, 1);
+    else {
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+
+<body>
+    <!-- Top Logos Bar -->
+  <div class="top-bar">
+    <img src="../assets/logo1.png" alt="ICAICCIT Logo"></a>
+    <a href="https://manavrachna.edu.in/"><img src="../assets/logo2.png" alt="Manav Rachna Logo"></a>
+    <img src="../assets/logo3.png" alt="SST Logo">
+  </div>
+
+  <!-- Navbar -->
+  <header>  
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="../index.html" class="active">Home</a></li>
+        <li><a href="../about.html">About Us</a></li>
+
+        <li class="has-dropdown">
+          <a href="#" class="dd-toggle" aria-haspopup="true" aria-expanded="false">
+            Conference Committee
+          </a>
+          <ul class="dropdown" aria-label="submenu">
+            <li><a href="international.html">International and National advisory Committee</a></li>
+            <li><a href="institutional.html">Institutional Advisory Committee</a></li>
+            <li><a href="ieee.html">IEE Oversight Committee</a></li>
+            <li><a href="organizing.html">Organizing Committee</a></li>
+            <li><a href="keynote.html">Keynote Speakers</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="#theme">Conference Theme</a></li>
+        <li><a href="#cfp">Call for Paper</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="#previous">Previous Conferences</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Main Section-->
+  <section class="oversight">
+    <h1>IEEE Oversight <span>Committee</span></h1>
+    
+    <p>Prof. Vivek Shrivastava, Lead Member Coordinator for ICAICCIT-2025 and Section Exec Com Member Co-opted & Member-IEEE Delhi Section STDCOM on T & P Act</p>
+    
+    <p>Prof. Rajnish Sharma, Section Vice Chair & Member-IEEE Delhi Section STDCOM on T & P Act</p>
+    
+    <p>Dr. Ekta Gandotra, Member-IEEE Delhi Section STDCOM on T & P Act</p>
+    
+    <p>Prof. Sneha Kabra, (Section Secretary & Member-IEEE Delhi Section STDCOM on T & P Act)</p>
+  </section>
+
+      <!-- Academic Partners -->
+  <section id="partners" class="partners">
+    <h2>Academic <span>Partners</span></h2>
+    <div class="partners-logos">
+      <a href="https://www.awsacademy.com/"><img src="../assets/aws.png" alt="AWS"></a>
+      <a href="https://www.oracle.com/"><img src="../assets/oracle.png" alt="Oracle"></a>
+      <a href="https://www.oracle.com/"><img src="../assets/ibm.png" alt="IBM"></a>
+      <a href="https://www.microsoft.com/"><img src="../assets/microsoft.png" alt="Microsoft"></a>
+      <a href="https://www.infosys.com/"><img src="../assets/infosys.png" alt="Infosys"></a>
+      <a href="https://www.purdue.edu/"><img src="../assets/purdue.png" alt="Purdue University"></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+            <img src="../assets/logo4.png" alt="ICAICCIT Logo">
+            </div>
+
+            <ul class="footer-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../index.html">Conference Committee</a></li>
+            <li><a href="#cfp">Call for Papers</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="#previous">Previous Year Conferences</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <div class="footer-contact">
+            <p>
+                📞 +91 9910891864 (Dr. Poonam Tanwar) &nbsp; | &nbsp; 
+                📧 <a href="mailto:icaiccit2025@mriu.edu.in">icaiccit2025@mriu.edu.in</a>
+            </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright © ICAICCIT - 2025. All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
