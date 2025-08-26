@@ -1,0 +1,252 @@
+/* ===== General Dark Cyberpunk Theme ===== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top left, #0a0a0f, #141820, #1c1f2b);
+  color: #e0e0e0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ================== LINK BOX (Register + IEEE) ================== */
+.link-box {
+  margin: 30px auto;
+  padding: 20px 28px;
+  border-radius: 16px;
+  max-width: 720px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: rgba(20, 20, 30, 0.85);
+  color: #00f9ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+/* 🔥 Animated Gradient Border */
+.link-box::before {
+  content: "";
+  position: absolute;
+  top: -3px; left: -3px; right: -3px; bottom: -3px;
+  background: linear-gradient(90deg, #00f9ff, #ff00ff, #00ff88, #ff00aa, #00f9ff);
+  background-size: 400%;
+  border-radius: 18px;
+  z-index: -1;
+  animation: gradientMove 8s linear infinite;
+}
+
+/* Subtle hover scaling */
+.link-box:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6),
+              0 0 40px rgba(255, 0, 255, 0.4);
+}
+
+/* Link styles inside */
+.link-box a {
+  text-decoration: none;
+  color: #00f9ff;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.link-box a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff, 0 0 15px #ff33ff;
+}
+
+/* 🌈 Moving Gradient Animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================== GLITCH EFFECT for IEEE ================== */
+.ieee-glitch {
+  position: relative;
+  display: inline-block;
+  color: #00f9ff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.ieee-glitch::before,
+.ieee-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.ieee-glitch::before {
+  color: #ff00ff;
+  animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.ieee-glitch::after {
+  color: #00ffff;
+  animation: glitchBottom 2s infinite linear alternate-reverse;
+}
+
+/* Glitch animations */
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); transform: translate(-2px, -2px); }
+  20% { clip: rect(0, 9999px, 10px, 0); transform: translate(2px, -1px); }
+  40% { clip: rect(0, 9999px, 5px, 0); transform: translate(-1px, 1px); }
+  60% { clip: rect(0, 9999px, 15px, 0); transform: translate(1px, -2px); }
+  80% { clip: rect(0, 9999px, 8px, 0); transform: translate(-2px, 2px); }
+  100% { clip: rect(0, 9999px, 12px, 0); transform: translate(0, 0); }
+}
+
+@keyframes glitchBottom {
+  0% { clip: rect(5px, 9999px, 12px, 0); transform: translate(2px, 2px); }
+  20% { clip: rect(10px, 9999px, 18px, 0); transform: translate(-1px, 1px); }
+  40% { clip: rect(2px, 9999px, 10px, 0); transform: translate(1px, -1px); }
+  60% { clip: rect(12px, 9999px, 20px, 0); transform: translate(-2px, 2px); }
+  80% { clip: rect(6px, 9999px, 14px, 0); transform: translate(1px, -2px); }
+  100% { clip: rect(8px, 9999px, 16px, 0); transform: translate(0, 0); }
+}
+
+
+/* ===== Headings ===== */
+h2, h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 40px 0 20px;
+  color: #00f9ff;
+  animation: fadeDown 1.2s ease forwards;
+}
+
+h2 span {
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff, 0 0 16px #ff33ff;
+}
+
+p, a {
+  text-align: center;
+  font-size: 1.05rem;
+  margin: 10px auto;
+  max-width: 900px;
+  color: #b0b0c0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+a {
+  color: #00f9ff;
+  text-decoration: none;
+  border-bottom: 1px dashed #ff00ff;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff, 0 0 12px #ff33ff;
+}
+
+/* ===== Table Layout in Pairs ===== */
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(20, 20, 30, 0.8);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3),
+              0 0 25px rgba(255, 0, 255, 0.2);
+  animation: tableFadeUp 1.5s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+table:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6),
+              0 0 30px rgba(255, 0, 255, 0.5);
+}
+
+th, td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 14px 20px;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+th {
+  background: linear-gradient(90deg, #00f9ff 0%, #ff00ff 100%);
+  color: #0a0a0f;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:hover {
+  background: rgba(255, 0, 255, 0.1);
+  color: #00f9ff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Payment Section Styling ===== */
+div {
+  background: rgba(20, 20, 30, 0.7);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  max-width: 900px;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+div p {
+  color: #d0d0d0;
+  font-size: 1rem;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes tableFadeUp {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  table, div, p {
+    width: 95%;
+    font-size: 0.95rem;
+  }
+
+  h2, h3 {
+    font-size: 1.6rem;
+  }
+}
+
