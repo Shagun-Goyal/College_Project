@@ -463,3 +463,107 @@ body::before {
   color: #ffffff;
 }
 
+/* ===== Universal Responsive Fixes ===== */
+
+/* Make all images flexible */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Avoid overflow on small screens */
+.container, section, div {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===== Responsive Layouts ===== */
+@media (max-width: 1024px) {
+  .navbar .nav-links {
+    gap: 25px; /* shrink spacing */
+  }
+  .partners-logos {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar becomes vertical */
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .navbar {
+    padding: 12px;
+  }
+
+  /* Oversight section */
+  .oversight {
+    margin: 60px 15px;
+    padding: 25px;
+  }
+  .oversight h1 {
+    font-size: 1.8rem;
+    white-space: normal; /* break long text */
+    border-right: none;  /* remove typing border */
+  }
+  .oversight p {
+    font-size: 1rem;
+  }
+
+  /* Partners logos shrink */
+  .partners-logos img {
+    height: 35px;
+  }
+
+  /* Footer stack */
+  .footer-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Tiny phones */
+  .top-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .top-bar img {
+    height: 40px;
+  }
+
+  .navbar .nav-links {
+    gap: 12px;
+  }
+  .navbar a {
+    font-size: 0.9rem;
+  }
+
+  .oversight h1 {
+    font-size: 1.5rem;
+  }
+  .oversight p {
+    font-size: 0.9rem;
+  }
+
+  .partners h2 {
+    font-size: 1.5rem;
+  }
+  .partners-logos {
+    gap: 25px;
+  }
+
+  .footer-logo img {
+    width: 70px;
+  }
+  .footer-contact p {
+    font-size: 10px;
+  }
+}
+

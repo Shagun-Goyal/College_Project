@@ -439,3 +439,94 @@
   font-size: 10px;
   color: #ffffff;
 }
+
+/* ================================
+   GLOBAL RESPONSIVENESS FIXES
+================================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet adjustments */
+@media (max-width: 992px) {
+  .navbar .nav-links {
+    gap: 25px;
+  }
+  .committee-title {
+    font-size: 2.2rem;
+  }
+  .partners-logos {
+    gap: 40px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Navbar goes vertical */
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 12px;
+  }
+  .navbar {
+    padding: 12px;
+  }
+
+  /* Committee cards */
+  .committee-card {
+    max-width: 100%;
+  }
+
+  /* Partners */
+  .partners h2 {
+    font-size: 1.6rem;
+  }
+  .partners-logos img {
+    height: 35px;
+  }
+
+  /* Footer stacked */
+  .footer-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .footer-nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .top-bar img {
+    height: 40px;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
+
+  .committee-title {
+    font-size: 1.5rem;
+  }
+
+  .partners h2 {
+    font-size: 1.4rem;
+  }
+  .partners-logos {
+    gap: 20px;
+  }
+
+  .footer-logo img {
+    width: 70px;
+  }
+  .footer-contact p {
+    font-size: 10px;
+  }
+}

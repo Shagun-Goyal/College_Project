@@ -442,3 +442,159 @@
   color: #ffffff;
 }
 
+/* ================================
+   RESPONSIVE FIXES (Add at end)
+================================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet screens */
+@media (max-width: 992px) {
+  .navbar .nav-links {
+    gap: 28px;
+    font-size: 1rem;
+  }
+
+  .conference-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .partners h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 12px 20px;
+  }
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 12px;
+  }
+  .navbar .nav-links li {
+    width: 100%;
+  }
+  .navbar .nav-links a {
+    display: block;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  /* Dropdown adapts */
+  .navbar .dropdown {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 6px;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  /* Conference section */
+  .conference-section {
+    padding: 20px;
+    margin: 40px auto;
+  }
+  .conference-section h2 {
+    font-size: 1.8rem;
+  }
+  .conference-theme {
+    font-size: 1.1rem;
+  }
+  .track-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Partners */
+  .partners {
+    padding: 50px 15px;
+  }
+  .partners h2 {
+    font-size: 1.5rem;
+  }
+  .partners-logos {
+    gap: 28px;
+  }
+  .partners-logos img {
+    height: 35px;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .footer-nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .top-bar img {
+    height: 40px;
+  }
+
+  .navbar .nav-links {
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+
+  .conference-section h2 {
+    font-size: 1.5rem;
+  }
+  .conference-theme {
+    font-size: 1rem;
+  }
+
+  .track-card {
+    padding: 20px 15px;
+  }
+  .track-card h3 {
+    font-size: 1.3rem;
+  }
+  .track-details h4 {
+    font-size: 1rem;
+  }
+
+  .partners h2 {
+    font-size: 1.3rem;
+  }
+  .partners-logos img {
+    height: 28px;
+  }
+
+  .footer-logo img {
+    width: 70px;
+  }
+  .footer-contact p {
+    font-size: 10px;
+  }
+}
+
+/* Mobile dropdown toggle fix */
+@media (max-width: 768px) {
+  .navbar .dropdown {
+    display: none;
+  }
+  .navbar .dropdown.open {
+    display: block;
+  }
+}
+
+

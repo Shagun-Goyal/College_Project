@@ -614,10 +614,6 @@ body::after {
   opacity: 1;
 }
 
-/* (Tip) Add data-text in HTML for perfect overlay:
-   <div class="link-box-sec"><a href="#" data-text="Open Registration">Open Registration</a></div>
-   If you can’t change HTML, it still looks great without. */
-
 /* ===================== TABLE: SCROLL REVEAL + ROW GLOW ===================== */
 .fee-table-sec {
   transform: translateY(20px);
@@ -777,3 +773,146 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/* ================================
+   RESPONSIVE FIXES (Add at end)
+================================= */
+
+/* General image scaling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet screens */
+@media (max-width: 992px) {
+  .navbar-sec .nav-links-sec {
+    gap: 28px;
+    font-size: 1rem;
+  }
+
+  .registration-sec h2 {
+    font-size: 2rem;
+  }
+
+  .partners-sec h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  /* Navbar stack */
+  .navbar-sec {
+    padding: 12px 20px;
+    text-align: left;
+  }
+  .navbar-sec .nav-links-sec {
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+  }
+  .navbar-sec .nav-links-sec li {
+    width: 100%;
+  }
+  .navbar-sec .nav-links-sec a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  /* Dropdown expand full width */
+  .navbar-sec .dropdown-sec {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 6px;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  /* Registration section */
+  .registration-sec {
+    margin: 30px auto;
+    padding: 20px;
+  }
+  .registration-sec h2 {
+    font-size: 1.6rem;
+  }
+  .registration-sec h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Fee table scroll */
+  .fee-table-sec {
+    display: block;
+    overflow-x: auto;
+  }
+
+  /* Partners */
+  .partners-sec {
+    padding: 50px 15px;
+  }
+  .partners-sec h2 {
+    font-size: 1.5rem;
+  }
+  .partners-logos-sec {
+    gap: 28px;
+  }
+  .partners-logos-sec img {
+    height: 35px;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  .footer-nav {
+    text-align: center;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .top-bar-sec {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .top-bar-sec img {
+    height: 40px;
+  }
+
+  .navbar-sec .nav-links-sec {
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+
+  .registration-sec h2 {
+    font-size: 1.4rem;
+  }
+  .registration-sec h3 {
+    font-size: 1rem;
+  }
+
+  .partners-sec h2 {
+    font-size: 1.3rem;
+  }
+  .partners-logos-sec img {
+    height: 28px;
+  }
+
+  .footer-logo img {
+    width: 70px;
+  }
+  .footer-contact p {
+    font-size: 12px;
+  }
+}
+
