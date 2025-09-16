@@ -1,4 +1,4 @@
-const words = ["COMMUNICATION", "COMPUTATION", "INFORMATION TECHNOLOGY"];
+const words = ["Artificial Intelligence", "Data Science", "Secure Systems"];
 let wordIndex = 0;
 let charIndex = 0;
 let currentWord = "";
