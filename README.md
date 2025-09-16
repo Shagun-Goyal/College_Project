@@ -1,4 +1,5 @@
-# 🌐 ICAICCIT 2025 Website (Clone + Custom Build)
+# 🌐 ICAICCIT 2025 Website 
+# (Clone + Custom Build)
 
 This is a vanilla HTML, CSS, and JavaScript implementation of the official ICAICCIT 2025 conference website, recreated in my own style with improvements.
 The project demonstrates building a responsive, interactive, and modern conference landing page without using any frameworks.
@@ -21,3 +22,6 @@ JavaScript (Vanilla JS) for interactivity and animations
 
 For queries or collaboration:
 princesingh6173@gmail.com
+
+# Link
+https://icaiccit-2025.netlify.app/
