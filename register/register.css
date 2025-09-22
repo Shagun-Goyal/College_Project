@@ -30,7 +30,7 @@ body {
   align-items: center;
   gap: 40px;
   padding: 15px;
-  background: rgba(20, 22, 30, 0.9);
+  background: rgb(255, 255, 255);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -38,12 +38,12 @@ body {
 .top-bar-sec img {
   height: 55px;
   transition: transform 0.4s ease, filter 0.4s ease;
-  filter: drop-shadow(0 0 6px var(--neon-cyan));
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.266);
 }
 
 .top-bar-sec img:hover {
   transform: scale(1.15);
-  filter: drop-shadow(0 0 12px var(--neon-purple));
+  box-shadow: 2px 2px 20px rgba(7, 92, 250, 0.87);
 }
 
 /* ========== NAVBAR ========== */
@@ -52,7 +52,7 @@ body {
   justify-content: center;
   background: linear-gradient(90deg, #0f172a, #1e293b);
   padding: 15px 25px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(137, 137, 137, 0.942);
 }
 
 .navbar-sec .nav-links-sec {
