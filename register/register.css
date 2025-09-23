@@ -208,7 +208,7 @@ body {
   margin: 60px auto;
   padding: 30px;
   text-align: center;
-  background: var(--card-bg);
+  background: rgba(0, 25, 248, 0.502);
   border-radius: 18px;
   box-shadow: 0 0 20px rgba(0, 247, 255, 0.2);
 }
@@ -217,12 +217,13 @@ body {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: var(--neon-cyan);
-  text-shadow: 0 0 6px var(--neon-cyan), 0 0 12px var(--neon-purple);
+  color: #fcfcfc; /* Deep blue for academic/professional look */
+  text-shadow: none;
+  animation: none;
 }
 
 .registration-sec h2 span {
-  color: var(--neon-purple);
+  color: #1976d2; /* Accent blue */
 }
 
 .registration-sec h3 {
@@ -230,8 +231,9 @@ body {
   margin-bottom: 15px;
   font-size: 1.6rem;
   font-weight: bold;
-  color: var(--neon-yellow);
-  text-shadow: 0 0 6px var(--neon-yellow), 0 0 12px var(--neon-purple);
+  color: #1976d2; /* Accent blue */
+  text-shadow: none;
+  animation: none;
 }
 
 .registration-sec p {
@@ -245,13 +247,13 @@ body {
   max-width: 420px;
   padding: 14px 20px;
   border-radius: 10px;
-  background: rgba(0, 247, 255, 0.07);
-  border: 1px solid var(--neon-cyan);
+  background: rgba(0, 247, 255, 0.034);
+  border: 1px solid black;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .link-box-sec a {
-  color: var(--neon-cyan);
+  color: black;
   font-weight: 600;
   text-decoration: none;
   font-size: 1.1rem;
