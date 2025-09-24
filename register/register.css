@@ -7,8 +7,8 @@
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: rgb(0,51,102);
-  background: linear-gradient(159deg, rgba(0,51,102,1) 0%, rgba(15,82,186,1) 100%);
+  background: rgb(0, 42, 84);
+  background: linear-gradient(159deg, rgba(0,51,102,1) 70%, rgb(0, 54, 134) 100%);
   color: #e0e0e0;
   line-height: 1.7;
   overflow-x: hidden;
