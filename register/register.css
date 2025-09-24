@@ -7,7 +7,7 @@
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(circle at top left, #0a0a0f, #141820, #1c1f2b);
+  background: rgb(171, 171, 171);
   color: #e0e0e0;
   line-height: 1.7;
   overflow-x: hidden;
@@ -208,9 +208,9 @@ body {
   margin: 60px auto;
   padding: 30px;
   text-align: center;
-  background: rgba(0, 25, 248, 0.502);
+  background: rgb(0,71,171);
+  background: linear-gradient(159deg, rgba(0,71,171,1) 0%, rgba(28,169,201,1) 100%);;
   border-radius: 18px;
-  box-shadow: 0 0 20px rgba(0, 247, 255, 0.2);
 }
 
 .registration-sec h2 {
@@ -218,12 +218,12 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
   color: #fcfcfc; /* Deep blue for academic/professional look */
-  text-shadow: none;
+  text-shadow: 2px solid black;
   animation: none;
 }
 
 .registration-sec h2 span {
-  color: #1976d2; /* Accent blue */
+  color: #ffffff; /* Accent blue */
 }
 
 .registration-sec h3 {
@@ -231,8 +231,8 @@ body {
   margin-bottom: 15px;
   font-size: 1.6rem;
   font-weight: bold;
-  color: #1976d2; /* Accent blue */
-  text-shadow: none;
+  color: #ffffff; /* Accent blue */
+  text-shadow: 10px solid;
   animation: none;
 }
 
@@ -253,7 +253,7 @@ body {
 }
 
 .link-box-sec a {
-  color: black;
+  color: rgb(214, 214, 214);
   font-weight: 600;
   text-decoration: none;
   font-size: 1.1rem;
