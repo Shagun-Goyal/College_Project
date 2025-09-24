@@ -12,6 +12,7 @@ body {
   color: #e0e0e0;
   line-height: 1.7;
   overflow-x: hidden;
+  animation: fadeIn 1.5s ease-in;
 }
 
 /* Neon Glow Accent Colors */
@@ -215,11 +216,11 @@ body {
 }
 
 .registration-sec h2 {
-  font-size: 2.2rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #fcfcfc; /* Deep blue for academic/professional look */
-  text-shadow: 2px solid black;
+  text-shadow: 0 0 10px #0066ff , 0 0 5px purple;
   animation: none;
 }
 
@@ -419,7 +420,7 @@ body {
 
 /* ========== ANIMATIONS ========== */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -463,10 +464,10 @@ body {
 /* Apply them to sections */
 
 /* Headings pulse */
-.registration-sec h2, 
+/* .registration-sec h2, 
 .partners-sec h2 {
   animation: neonPulse 3s infinite ease-in-out;
-}
+} */
 
 /* Floating partner logos */
 .partners-logos-sec img {
