@@ -7,7 +7,8 @@
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: rgb(171, 171, 171);
+  background: rgb(0,51,102);
+  background: linear-gradient(159deg, rgba(0,51,102,1) 0%, rgba(15,82,186,1) 100%);
   color: #e0e0e0;
   line-height: 1.7;
   overflow-x: hidden;
@@ -208,8 +209,8 @@ body {
   margin: 60px auto;
   padding: 30px;
   text-align: center;
-  background: rgb(0,71,171);
-  background: linear-gradient(159deg, rgba(0,71,171,1) 0%, rgba(28,169,201,1) 100%);;
+  background: rgba(0, 71, 171, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.746);
   border-radius: 18px;
 }
 
@@ -229,11 +230,6 @@ body {
 .registration-sec h3 {
   margin-top: 40px;
   margin-bottom: 15px;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #ffffff; /* Accent blue */
-  text-shadow: 10px solid;
-  animation: none;
 }
 
 .registration-sec p {
@@ -253,7 +249,7 @@ body {
 }
 
 .link-box-sec a {
-  color: rgb(214, 214, 214);
+  color: rgb(225, 225, 225);
   font-weight: 600;
   text-decoration: none;
   font-size: 1.1rem;
@@ -262,7 +258,7 @@ body {
 
 .link-box-sec:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px var(--neon-cyan), 0 0 25px var(--neon-purple);
+  box-shadow: 1px 1px 7px black;
 }
 
 /* ========== FEE TABLE ========== */
@@ -590,7 +586,7 @@ body::after {
 }
 
 /* Animated conic border using mask magic */
-.registration-sec::before {
+/* .registration-sec::before {
   content: "";
   position: absolute;
   inset: -2px;
@@ -602,17 +598,17 @@ body::after {
       var(--neon-purple),
       var(--neon-yellow),
       var(--neon-cyan)
-    );
-  animation: borderSpin var(--border-rot-s) linear infinite;
+    ); */
+  /*animation: borderSpin var(--border-rot-s) linear infinite;
   /* show only the ring */
-  -webkit-mask:
+  /*-webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
   padding: 2px;
   pointer-events: none;
-}
+}*/
 
 /* Soft moving glow blob underneath content */
 .registration-sec::after {
@@ -628,7 +624,7 @@ body::after {
 }
 
 /* Laser scan across headings */
-.registration-sec h2, .registration-sec h3 {
+/* .registration-sec h2, .registration-sec h3 {
   position: relative;
   overflow: hidden;
 }
@@ -642,7 +638,7 @@ body::after {
   mix-blend-mode: screen;
   transform: translateX(-120%);
   animation: laserSweep var(--scan-s) linear infinite;
-}
+} */
 
 /* ===================== LINK BOXES: HOLOGRAPHIC + GLITCH ON HOVER ===================== */
 .link-box-sec {
