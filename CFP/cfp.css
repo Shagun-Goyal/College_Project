@@ -266,7 +266,6 @@ a {
 
 a:hover {
   color: #ff4b5c;
-  text-shadow: 0 0 10px #ff4b5c;
 }
 
 /* ====== TABLE STYLING ====== */
@@ -303,7 +302,6 @@ ul {
 }
 
 ul li {
-  margin-bottom: 10px;
   color: #e0e0e0;
 }
 
