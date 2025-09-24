@@ -128,7 +128,7 @@ body {
 /*Submenu  Panel*/
 .navbar .dropdown {
   position: absolute;
-  top: 115%;
+  top: 62%;
   left: 0;
   min-width: 260px;
   padding: 12px;
@@ -304,14 +304,11 @@ ul {
 
 ul li {
   margin-bottom: 10px;
-  list-style-type: "✦ ";
   color: #e0e0e0;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 ul li:hover {
   color: #00ffe5;
-  transform: translateX(8px);
 }
 
 /* ==== PARTNERS ==== */
