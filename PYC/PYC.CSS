@@ -24,7 +24,7 @@
 
 /* About Section */
 .about {
-  padding: 80px 10%;
+  padding: 5% 10% 20% 10%;
   background: linear-gradient(135deg, #0d0d1a, #12122b);
 }
 
@@ -40,15 +40,14 @@
   display: flex;
   align-items: center;
   gap: 50px;
-  opacity: 0;
   transform: translateY(60px);
   transition: all 1s ease;
 }
 
-.about-card.show {
+/* .about-card.show {
   opacity: 1;
   transform: translateY(0);
-}
+} */
 
 /* Reverse layout */
 .about-card.reverse {
@@ -87,16 +86,25 @@
   font-size: 2rem;
   color: #2ad7a9;
   margin-bottom: 15px;
-  opacity: 0;
   transform: translateX(-40px);
   transition: all 1s ease;
+}
+.about-content1 h3 {
+  font-size: 2rem;
+  color: #2ad7a9;
+  margin-bottom: 15px;
+}
+.about-content1 p {
+  text-align: justify;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #e8bf43;
 }
 .about-content p {
   text-align: justify;
   font-size: 1.05rem;
   line-height: 1.7;
   color: #e8bf43;
-  opacity: 0;
   transform: translateX(40px);
   transition: all 1.2s ease;
 }
